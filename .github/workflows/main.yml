@@ -1,0 +1,13 @@
+name: Keep Replit Active
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Ejecuta cada minuto
+
+jobs:
+  ping_replit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hacer ping a Replit
+        run: curl -I https://replit.com/@landerteran663/Osu-rate-changer-online-v131-F#main.py
